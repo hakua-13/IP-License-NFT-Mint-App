@@ -1,7 +1,6 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
-// import {ethers} from "ethers";
-import { Routes, Route, Link, useNavigate } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 // import contractABI from './components/contractABI.json';
 import './App.css';
@@ -11,7 +10,6 @@ import { MintPage } from './components/MintPage';
 
 function App() {
   const [ currentAccount, setCurrentAccount ] = useState('');
-  const navigate = useNavigate();
 
   const checkIfWalletIsConnected = async() => {
     try{
