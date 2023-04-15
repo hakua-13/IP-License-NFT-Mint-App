@@ -43,10 +43,25 @@ function App() {
     
   },[currentAccount]);
 
+  const connectWallet = async() => {
+    try{
+      const {ethereum} = window;
+      if(!ethereum){
+        return;
+      }
+      const accounts = await ethereum.request({method: "eth_requestAccounts"});
+      if(accounts.length > 0){
+        setCurrentAccount(accounts[0]);
+      }
+    }catch(error){
+      console.log(error);
+    }
+  }
+
   return (
     <div className="App">
       {!currentAccount && (
-        <button className="cta-button">connect wallet</button>
+        <button className="cta-button" onClick={connectWallet}>connect wallet</button>
       )}
 
       <Routes>

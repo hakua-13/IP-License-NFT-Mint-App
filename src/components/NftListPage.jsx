@@ -51,8 +51,8 @@ export const NftListPage = () => {
           console.log('index: ', index);
           return(
             <div key={index} className="nftListCard">
-              <p>name: {mintableIp.name}</p>
               <img src={mintableIp.imageURI} alt="imageURI"></img>
+              <p>name: {mintableIp.name}</p>
               <p>price: {mintableIp.price} ETH</p>
               <p>depositPrice: {mintableIp.depositPrice} ETH</p>
               <p>expiration: {mintableIp.expirationDays / 86400} days</p>

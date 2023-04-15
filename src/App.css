@@ -63,6 +63,7 @@ nftListPage
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 32px;
 }
 
 .nftListCard{
@@ -70,9 +71,10 @@ nftListPage
   width: 360px;
   padding: 12px 0;
 }
-/* .nftListCard button{
+.nftListCard button{
   display: inline;
-} */
+  margin-top: 8px;
+}
 .nftList.cta-button{
   margin: 60px auto 0;
 }
