@@ -1,38 +1,51 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
+  /* width: 600px; */
+  margin: 0 auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title{
+  color: #333;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.CreateNft{
+  /* margin: 0 auto; */
+  max-width: 450px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: auto;
+  /* margin-bottom: 32px; */
 }
 
-.App-link {
-  color: #61dafb;
+.CreateNft h2{
+  margin: 32px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.CreateNft input{
+  display: block;
+  /* margin: 0 auto 8px; */
+  margin-bottom: 16px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: auto;
+}
+
+.cta-button{
+  border: none;
+  border-radius: 4px;
+  padding: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  width: auto;
+}
+
+img{
+  width: 100px;
 }
