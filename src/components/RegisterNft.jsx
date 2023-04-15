@@ -3,16 +3,17 @@ import {ethers} from "ethers";
 
 import { CONTRACT_ADDRESS } from './constans'
 import contractABI from './contractABI.json';
+import { useNavigate } from 'react-router-dom';
 
-export const CreateNft = () => {
-  // const CONTRACT_ADDRESS = "0xD2ae811F8Cf8746D31a0C579d382f32Dac1389eb";
-
+export const RegisterNft = () => {
   const [ name, setName ] = useState('');
   const [ imageURI, setImageURI ] = useState('');
   const [ expirationDays, setExpirationDays ] = useState();
   const [ price, setPrice ] = useState();
   const [ depositPrice, setDepositPrice ] = useState();
   const [ maxMint, setMaxMint ] = useState();
+
+  const navigate = useNavigate();
 
   const registerIpLicenseNft = async() => {
     const provider = new ethers.providers.Web3Provider(window.ethereum);
@@ -31,8 +32,8 @@ export const CreateNft = () => {
     await registerNftTxn.wait();
   }
   return(
-    <div className='CreateNft'>
-      <h2 className="title">CreateNft</h2>
+    <div className='registerNft'>
+      <h2 className="title">Register NFT</h2>
       <p>name</p>
       <input onChange={(e) => setName(e.target.value)} value={name}/>
       <p>imageURI</p>
@@ -48,6 +49,7 @@ export const CreateNft = () => {
 
       <button className="cta-button" onClick={registerIpLicenseNft}>register NFT</button>
 
+      <button className="cta-button" onClick={() => {navigate('/')}}>Back to NFT list</button>
     </div>
   )
 }

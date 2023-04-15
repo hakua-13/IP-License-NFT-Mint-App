@@ -14,7 +14,22 @@
 
 }
 
-.CreateNft{
+img{
+  width: 100px;
+}
+
+.cta-button{
+  display: block;
+  border: none;
+  border-radius: 4px;
+  padding: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  width: auto;
+}
+
+
+.registerNft{
   /* margin: 0 auto; */
   max-width: 450px;
   display: flex;
@@ -23,11 +38,11 @@
   /* margin-bottom: 32px; */
 }
 
-.CreateNft h2{
+.registerNft h2{
   margin: 32px 0;
 }
 
-.CreateNft input{
+.registerNft input{
   display: block;
   /* margin: 0 auto 8px; */
   margin-bottom: 16px;
@@ -37,15 +52,50 @@
   width: auto;
 }
 
-.cta-button{
-  border: none;
-  border-radius: 4px;
-  padding: 12px;
-  font-weight: bold;
-  cursor: pointer;
-  width: auto;
+.registerNft .cta-button:nth-of-type(2){
+  margin-top: 60px;
 }
 
-img{
-  width: 100px;
+/* ###
+nftListPage
+### */
+.nftListContainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.nftListCard{
+  border: 1px solid #ddd;
+  width: 360px;
+  padding: 12px 0;
+}
+/* .nftListCard button{
+  display: inline;
+} */
+.nftList.cta-button{
+  margin: 60px auto 0;
+}
+
+/* ###
+mintPage
+### */
+.mintPageContainer{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.mintPageCard .cta-button{
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+
+.mintPageCard img{
+  width: 200px;
+  margin-bottom: 20px;
+}
+.mintPageCard p{
+  margin-bottom: 6px;
 }
